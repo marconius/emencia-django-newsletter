@@ -31,7 +31,8 @@ class Command(NoArgsCommand):
                     # * alter tests to address encoding
                     
                     #print 'Start emailing %s' % newsletter.title
-                    print 'Start emailing %s' % newsletter.id
+                    print 'Start emailing %s' % unicode(newsletter.id,
+                                                        encoding='utf-8')
                 mailer.run()
 
         if verbose:
